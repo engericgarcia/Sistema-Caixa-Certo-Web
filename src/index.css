@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply bg-brand-50/60 text-ink-900 font-sans;
+  }
+
+  /* Some o "spinner" dos inputs numéricos */
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-brand-100 bg-white shadow-card;
+  }
+
+  .field-label {
+    @apply mb-1.5 block text-sm font-medium text-ink-700;
+  }
+
+  .field {
+    @apply w-full rounded-xl border border-brand-200 bg-white px-3.5 py-2.5 text-sm
+           text-ink-900 outline-none transition
+           placeholder:text-ink-500/60
+           focus:border-brand-400 focus:ring-4 focus:ring-brand-100
+           disabled:bg-slate-50 disabled:text-ink-500;
+  }
+
+  /* Bloco cinza pulsante usado enquanto os dados carregam */
+  .skeleton {
+    @apply relative overflow-hidden rounded-lg bg-brand-100/70;
+  }
+
+  .skeleton::after {
+    content: '';
+    @apply absolute inset-0 -translate-x-full;
+    background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0,
+      rgba(255, 255, 255, 0.6) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    animation: shimmer 1.4s infinite;
+  }
+
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .table-head {
+    @apply bg-brand-50/70 text-left text-xs font-semibold uppercase tracking-wide text-ink-500;
+  }
+}
+
+/* Barra de rolagem discreta */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #c3f0d1;
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #96e3b0;
+  background-clip: content-box;
+}
