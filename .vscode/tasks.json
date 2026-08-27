@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Rodar interface",
+      "type": "shell",
+      "command": "npm run dev",
+      "problemMatcher": [],
+      "isBackground": true,
+      "presentation": {
+        "group": "caixa-certo",
+        "panel": "dedicated",
+        "reveal": "always"
+      },
+      "runOptions": { "instanceLimit": 1 }
+    },
+    {
+      "label": "Compilar para produção",
+      "type": "shell",
+      "command": "npm run build",
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    }
+  ]
+}

@@ -15,7 +15,7 @@
 
 <p align="center">
   👉 <strong>API do sistema:</strong>
-  <a href="https://github.com/engericgarcia/caixa-certo-api">engericgarcia/caixa-certo-api</a>
+  <a href="https://github.com/engericgarcia/Sistema-Caixa-Certo-API">engericgarcia/Sistema-Caixa-Certo-API</a>
 </p>
 
 ---
@@ -68,11 +68,11 @@ paleta verde personalizada · [Recharts](https://recharts.org) para os gráficos
 ## 🚀 Como rodar
 
 **Pré-requisitos:** [Node.js 18.18+](https://nodejs.org) e a
-[API](https://github.com/engericgarcia/caixa-certo-api) rodando em `http://localhost:4000`.
+[API](https://github.com/engericgarcia/Sistema-Caixa-Certo-API) rodando em `http://localhost:4000`.
 
 ```bash
-git clone https://github.com/engericgarcia/caixa-certo-web.git
-cd caixa-certo-web
+git clone https://github.com/engericgarcia/Sistema-Caixa-Certo-Web.git
+cd Sistema-Caixa-Certo-Web
 
 npm install
 npm run dev
